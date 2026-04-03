@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<title>Umesh | Developer Portfolio</title>
+
+<link rel="stylesheet" href="style.css">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+</head>
+
+<body>
+
+<!-- Navbar -->
+
+<nav>
+
+<h2 class="logo">Umesh</h2>
+
+<ul>
+<li><a href="#about">About</a></li>
+<li><a href="#skills">Skills</a></li>
+<li><a href="#projects">Projects</a></li>
+</ul>
+
+</nav>
+
+<!-- Hero Section -->
+
+<section class="hero">
+
+<div class="hero-text">
+
+<h1>Hello, I'm <span>Umesh Yuvaraj</span></h1>
+
+<p>I am <span id="typing"></span></p>
+
+<a href="Umesh Resume.docx" download>
+<button class="btn">Download Resume</button>
+</a>
+
+<div class="social">
+<div class="social-links">
+<a href="https://www.linkedin.com/in/umesh-yuvaraj-a5a480302" target="_blank" rel="noopener noreferrer" class="social-btn linkedin" aria-label="LinkedIn" title="LinkedIn">
+<i class="fa-brands fa-linkedin-in"></i>
+</a>
+<a href="https://github.com/Umeshyuvaraj123" target="_blank" rel="noopener noreferrer" class="social-btn github" aria-label="GitHub" title="GitHub">
+<i class="fa-brands fa-github"></i>
+</a>
+<a href="mailto:umeshyuvaraj1@gmail.com" class="social-btn email" aria-label="Email" title="Email Umesh">
+<i class="fa-solid fa-envelope"></i>
+</a>
+
+</div>
+
+</section>
+
+<!-- About -->
+
+<section id="about" class="section">
+
+<h2>About Me</h2>
+
+<p>
+I am a BTech  IT student passionate about programming,
+web development and building creative projects.</p>
+<p>
+I enjoy learning new technologies and improving my coding skills.
+</p>
+
+</section>
+
+<!-- Skills -->
+
+<section id="skills" class="section">
+
+<h2>Skills</h2>
+
+<div class="skill">
+
+<p>HTML</p>
+<div class="progress">
+<div class="progress-bar html"></div>
+</div>
+
+<p>CSS</p>
+<div class="progress">
+<div class="progress-bar css"></div>
+</div>
+
+<p>JavaScript</p>
+<div class="progress">
+<div class="progress-bar js"></div>
+</div>
+
+<p>C Programming</p>
+<div class="progress">
+<div class="progress-bar c"></div>
+</div>
+
+<p>Java</p>
+<div class="progress">
+<div class="progress-bar java"></div>
+</div>
+
+</div>
+
+</section>
+
+<!-- Projects -->
+
+<section id="projects" class="section">
+
+<h2>Projects</h2>
+
+<div class="project-container">
+
+<div class="card">
+<h3>Movie Rating Website</h3>
+<p>A website to rate movies using stars.</p>
+</div>
+
+<div class="card">
+<h3>Student Portfolio</h3>
+<p>Personal portfolio website.</p>
+</div>
+
+<div class="card">
+<h3>IPL Player Stats</h3>
+<p>A simple web based IPL player statistics project.</p>
+</div>
+
+</div>
+
+</section>
+
+<footer>
+
+<p>© 2026 Umesh Yuvaraj</p>
+
+</footer>
+
+<!-- Typing Animation -->
+
+<script>
+
+const text = ["Web Developer","Programmer","BTech Student"];
+
+let index = 0;
+let charIndex = 0;
+
+function typeEffect(){
+
+if(charIndex < text[index].length){
+
+document.getElementById("typing").textContent += text[index].charAt(charIndex);
+
+charIndex++;
+
+setTimeout(typeEffect,100);
+
+}
+
+else{
+
+setTimeout(eraseEffect,1500);
+
+}
+
+}
+
+function eraseEffect(){
+
+if(charIndex > 0){
+
+document.getElementById("typing").textContent =
+text[index].substring(0,charIndex-1);
+
+charIndex--;
+
+setTimeout(eraseEffect,50);
+
+}
+
+else{
+
+index++;
+
+if(index >= text.length){
+index = 0;
+}
+
+setTimeout(typeEffect,200);
+
+}
+
+}
+
+typeEffect();
+
+</script>
+
+</body>
+</html>

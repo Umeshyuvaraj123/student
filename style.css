@@ -1,0 +1,248 @@
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial;
+}
+
+html{
+scroll-behavior:smooth;
+}
+
+/* Animated Gradient Background */
+
+body{
+color:white;
+background:linear-gradient(-45deg,#0f172a,#1e293b,#0ea5e9,#020617);
+background-size:400% 400%;
+animation:gradientBG 10s ease infinite;
+}
+
+@keyframes gradientBG{
+
+0%{background-position:0% 50%;}
+50%{background-position:100% 50%;}
+100%{background-position:0% 50%;}
+
+}
+
+/* Navbar */
+
+nav{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:20px 10%;
+background:#020617;
+}
+
+.logo{
+color:#38bdf8;
+}
+
+nav ul{
+display:flex;
+list-style:none;
+}
+
+nav ul li{
+margin-left:20px;
+}
+
+nav ul li a{
+text-decoration:none;
+color:white;
+font-weight:bold;
+transition:0.3s;
+}
+
+nav ul li a:hover{
+color:#38bdf8;
+}
+
+/* Hero */
+
+.hero{
+display:flex;
+justify-content:center;
+padding:100px 10%;
+text-align:center;
+}
+
+.hero-text h1{
+font-size:42px;
+}
+
+.hero-text span{
+color:#0f1111;
+}
+
+.hero-text p{
+margin-top:10px;
+font-size:20px;
+}
+
+/* Button */
+
+.btn{
+margin-top:20px;
+padding:10px 20px;
+border:none;
+background:#38bdf8;
+color:black;
+font-weight:bold;
+border-radius:5px;
+cursor:pointer;
+transition:0.3s;
+}
+
+.btn:hover{
+transform:scale(1.1);
+box-shadow:0 0 15px #38bdf8;
+}
+
+/* Social Icons */
+
+.social{
+margin-top:20px;
+}
+
+.social-links{
+display:flex;
+justify-content:center;
+align-items:center;
+gap:15px;
+}
+
+.social a{
+color:white;
+font-size:22px;
+transition:0.3s;
+}
+
+.social a:hover{
+color:#38bdf8;
+}
+
+.email-link{
+display:inline-block;
+margin-top:14px;
+font-size:16px;
+font-weight:bold;
+text-decoration:none;
+color:white;
+transition:0.3s;
+}
+
+.email-link:hover{
+color:#38bdf8;
+}
+
+/* Sections */
+
+.section{
+padding:80px 10%;
+text-align:center;
+}
+
+.section h2{
+margin-bottom:30px;
+}
+
+/* Skill Bars */
+
+.skill{
+width:60%;
+margin:auto;
+text-align:left;
+}
+
+.skill p{
+margin:15px 0 5px;
+}
+
+.progress{
+width:100%;
+background:#1e293b;
+border-radius:20px;
+overflow:hidden;
+height:10px;
+}
+
+.progress-bar{
+height:10px;
+background:#38bdf8;
+width:0;
+animation:fillBar 2s forwards;
+box-shadow:0 0 10px #38bdf8;
+}
+
+.progress-bar:hover{
+box-shadow:0 0 20px #38bdf8,0 0 40px #38bdf8;
+}
+
+.html{width:90%;}
+.css{width:85%;}
+.js{width:70%;}
+.c{width:80%;}
+.java{width:75%;}
+
+@keyframes fillBar{
+from{width:0;}
+}
+
+/* Projects */
+
+.project-container{
+display:flex;
+justify-content:center;
+gap:40px;
+flex-wrap:wrap;
+}
+
+.card{
+background:#1e293b;
+padding:20px;
+width:250px;
+border-radius:10px;
+transition:0.4s;
+box-shadow:0 5px 15px rgba(0,0,0,0.3);
+cursor:pointer;
+position:relative;
+overflow:hidden;
+}
+
+.card:hover{
+transform:translateY(-10px) scale(1.05);
+box-shadow:0 15px 30px rgba(0,0,0,0.6);
+}
+
+.card::before{
+content:"";
+position:absolute;
+top:0;
+left:-100%;
+width:100%;
+height:100%;
+background:linear-gradient(120deg,transparent,#38bdf8,transparent);
+transition:0.5s;
+}
+
+.card:hover::before{
+left:100%;
+}
+
+/* Typing */
+
+#typing{
+color:#38bdf8;
+font-weight:bold;
+}
+
+/* Footer */
+
+footer{
+text-align:center;
+padding:20px;
+background:#020617;
+}
